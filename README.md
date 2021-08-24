@@ -1,86 +1,43 @@
-# Requirements for Commit Names
+<h1 align="center">This specification is based and modified on the AngularJS commit message convention.</h1>
 
-#### init: - используется для начала проекта/таска. Примеры:
-+ init: start youtube-task
-+ init: start mentor-dashboard task
+#### Commit Message
 
-#### feat: - это реализованная новая функциональность из технического задания, (добавил поддержку зумирования, добавил footer, добавил карточку продукта). Примеры:
+```
+ init   (hw_3):    add solutions for tasks
+<type> (<scope>):  <short summary>
+  │       │             │
+  │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
+  │       │
+  │       └─⫸ Commit Scope: hw_1|hw_2|hw_3|hw_4|hw_5
+  │
+  └─⫸ Commit Type: build|docs|feat|fix|perf|refactor|test|init
+```
 
-+ feat: add basic page layout
-+ feat: implement search box 
-+ feat: implement request to youtube API
-+ feat: implement swipe for horizontal list
-+ feat: add additional navigation button
-+ feat: add banner
-+ feat: add social links
-+ feat: add physical security section
-+ feat: add real social icons
+### Type
 
-#### fix: - исправил ошибку в ранее реализованной функциональности. Примеры:
+> Must be one of the following:
 
-+ fix: implement correct loading data from youtube
-+ fix: change layout for video items to fix bugs
-+ fix: relayout header for firefox
-+ fix: adjust social links for mobile
++ **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
++ **docs**: Documentation only changes
++ **feat**: A new feature
++ **fix**: A bug fix
++ **perf**: A code change that improves performance
++ **refactor**: A code change that neither fixes a bug nor adds a feature
++ **test**: Adding missing tests or correcting existing tests
++ **init**: start project/task
 
-#### refactor: - новой функциональности не добавлял / поведения не менял. Файлы в другие места положил, удалил, добавил. Изменил форматирование кода (white-space, formatting, missing semi-colons, etc). Улучшил алгоритм, без изменения функциональности. Примеры:
+### Examples
 
-+ refactor: change structure of the project
-+ refactor: rename vars for better readability
-+ refactor: apply eslint
-+ refactor: apply prettier
+```
+  init(hw_1): add solutions for tasks
 
-#### docs: - используется при работе с документацией/readme проекта. Примеры:
+  refactor(hw_5): rename variables 
 
-+ docs: update readme with additional information
-+ docs: update description of run() method.
+  feat(hw_7): add solution for advanced level task 1-4
 
+  fix(hw_3): fix bug in task 3
 
-## Examples
+  docs(hw_12): add technology list
+```
 
-#### fix: minor typos in code
-* fixes task #3
-* fixes task #7
-
----
-
-#### chore(readme): fix consistency/appearance
-* Make some minor changes to improve consistency and appearance. (Fix some weird brackets, and styling in the thank you section)
-
----
-
-#### docs: adding Conventional Commits Next Version
-* Adding the tool Conventional Commits Next Version to the tooling section.
-
----
-
-#### build(deps): bump elliptic in /themes/conventional-commits
-* Bumps [elliptic](https://github.com/indutny/elliptic) from 6.5.2 to 6.5.3.
-* [Release notes](https://github.com/indutny/elliptic/releases)
-* [Commits](indutny/elliptic@v6.5.2...v6.5.3)
-
----
-
-#### Signed-off-by: dependabot[bot] <support@github.com>
-* Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
-
----
-
-#### docs(tooling): add several tools to the list
-* Add the following tools for Conventional Commits:
-    * commitizen/cz-cli
-    * commitizen-tools/commitizen
-    * commitlint
-    * gitlint
-    * semantic-release
-
---- 
-
-#### fix(ko): improve and add translation
-* add translation translations for related tools and project
-improve a translation in faq
-
----
-
-#### fix(example): present tense imperative (#19)
-* "adds ability" -> "add ability".
+[watch original](https://github.com/angular/angular/blob/master/CONTRIBUTING.md)
